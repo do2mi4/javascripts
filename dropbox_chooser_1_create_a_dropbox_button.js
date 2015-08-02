@@ -1,8 +1,8 @@
-<button type="button" id="testing" onclick="myFunction()">Dropbox</button>
-
-<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="Your-Key">
+<button type="button" id="testing" onclick="myFunction()">Site Testing</button>
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="Your Key">
 var button = Dropbox.createChooseButton(options);
 document.getElementById("testing").appendChild(button);
+Dropbox.choose(options);
 options = {
 
     // Required. Called when a user selects an item in the Chooser.
@@ -30,5 +30,25 @@ options = {
     // file types, such as "video" or "images" in the list. For more information,
     // see File types below. By default, all extensions are allowed.
     extensions: ['.pdf', '.doc', '.docx'],
+};
+
+file = {
+
+    // Name of the file.
+    name: "filename.txt",
+
+    // URL to access the file, which varies depending on the linkType specified when the
+    // Chooser was triggered.
+    link: "https://...",
+
+    // Size of the file in bytes.
+    bytes: 464,
+
+    // URL to a 64x64px icon for the file based on the file's extension.
+    icon: "https://...",
+
+    // A thumbnail URL generated when the user selects images and videos.
+    // If the user didn't select an image or video, no thumbnail will be included.
+    thumbnailLink: "https://...?bounding_box=75&mode=fit",
 };
 </script>
