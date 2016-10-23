@@ -1,2 +1,2 @@
 # javascripts
-Some must have javscripts and hello
+#partial work from an internship
